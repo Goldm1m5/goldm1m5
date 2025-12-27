@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://goldm1m5.com/sitemap.xml
