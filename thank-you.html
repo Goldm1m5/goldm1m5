@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Cảm ơn bạn – ABMGROUP / GOLDm1m5</title>
+  <meta name="description" content="Cảm ơn bạn đã mở tài khoản Exness. Bước tiếp theo để nhận hỗ trợ kỹ thuật MT4 – XAUUSD 1:1."/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+<div class="container">
+
+  <div class="nav">
+    <div class="brand">
+      <span>ABMGROUP</span>
+      <span class="brand-badge">GOLDm1m5</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="h1">🎉 Cảm ơn bạn!</h1>
+        <p class="sub">
+          Nếu bạn đã <b>mở tài khoản Exness</b>, bước tiếp theo là liên hệ để
+          mình hỗ trợ kỹ thuật <b>MT4 – XAUUSD 1:1</b>.
+        </p>
+
+        <!-- STEP8-INFO -->
+        <div class="small" id="step8info" style="margin-top:10px"></div>
+        <script>
+          (function(){
+            const u = new URL(window.location.href);
+            const ref = u.searchParams.get('ref');
+            const from = u.searchParams.get('from');
+            const src = u.searchParams.get('utm_source');
+            const el = document.getElementById('step8info');
+            if(!el) return;
+            let msg = '';
+            if(ref === 'exness') msg += 'Đã ghi nhận thao tác mở Exness';
+            if(from) msg += (msg?' • ':'') + 'Từ: ' + from;
+            if(src) msg += (msg?' • ':'') + 'Nguồn: ' + src;
+            if(msg) el.textContent = msg + '. Nếu bạn đã mở xong, nhắn Zalo để mình hỗ trợ 1:1.';
+          })();
+        </script>
+
+
+        <ol class="bullets">
+          <li>Nhắn Zalo để mình kiểm tra và hỗ trợ ngay</li>
+          <li>Nhận preset + hướng dẫn cài MT4</li>
+          <li>Tham gia nhóm để cập nhật và hỏi đáp</li>
+        </ol>
+
+        <div class="btnrow" style="margin-top:16px">
+          <a class="btn primary" href="https://zalo.me/0793171988" target="_blank">
+            Nhắn Zalo hỗ trợ ngay
+          </a>
+          <a class="btn secondary" href="https://zalo.me/g/lpoblz624" target="_blank">
+            Vào nhóm Zalo
+          </a>
+          <a class="btn secondary" href="https://t.me/+fbZOGFxVMSQ1ZDZl" target="_blank">
+            Vào Telegram
+          </a>
+        </div>
+
+        <div class="rule" style="margin-top:16px">
+          Lưu ý: Website không hô lệnh, không cam kết lợi nhuận.
+          Mục tiêu là giúp bạn giao dịch đúng kỹ thuật và quản trị rủi ro tốt hơn.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-cta">
+    <div class="footer-cta-inner">
+      <div class="footer-cta-body">
+        <h2 class="h2">Chưa mở tài khoản?</h2>
+        <p class="sub">
+          Bạn có thể mở tài khoản Exness trước, sau đó quay lại trang này.
+        </p>
+        <div class="btnrow">
+          <a class="btn primary" href="https://www.exmarkets.markets/vi/?utm_source=partners&ex_ol=1" target="_blank">
+            Mở tài khoản Exness
+          </a>
+          <a class="btn secondary" href="index.html">
+            Quay lại trang chủ
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
