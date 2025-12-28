@@ -226,3 +226,51 @@ img{max-width:100%; height:auto; display:block}
   border-color: rgba(30,136,229,0.55);
   box-shadow: 0 0 0 4px rgba(30,136,229,0.10);
 }
+/* ==============================
+   FIX: Ảnh to/nhỏ không đều + lộ nền đen
+   DÁN CUỐI FILE style.css
+   ============================== */
+
+.hero-media,
+.card-media,
+.footer-cta-media{
+  width:100%;
+  overflow:hidden;
+  border-radius: 16px;
+  background:#000;
+}
+
+/* HERO */
+.hero-media{
+  height: 420px;
+}
+@media (max-width: 920px){
+  .hero-media{ height: 260px; }
+}
+
+/* Các section card */
+.card-media{
+  height: 260px;
+}
+@media (max-width: 920px){
+  .card-media{ height: 220px; }
+}
+
+/* CTA dưới */
+.footer-cta-media{
+  height: 240px;
+}
+@media (max-width: 920px){
+  .footer-cta-media{ height: 220px; }
+}
+
+/* Ảnh luôn fill khung, không méo */
+.hero-media img,
+.card-media img,
+.footer-cta-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
