@@ -427,3 +427,38 @@ img{display:block; width:100%}
   .footer-cols{ grid-template-columns: 1fr; }
   .footer-mini{ white-space: normal; }
 }
+
+/* ==============================
+   CLICKABLE CTA UPGRADE (ABMGROUP)
+   Make buttons feel "raised" and tappable
+   ============================== */
+.btn, .mbar-btn{
+  transform: translateY(0);
+  box-shadow: 0 10px 24px rgba(14,26,43,0.14);
+}
+.btn:hover, .mbar-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px rgba(14,26,43,0.18);
+}
+.btn:active, .mbar-btn:active{
+  transform: translateY(1px);
+  box-shadow: 0 8px 18px rgba(14,26,43,0.14);
+}
+.btn.primary, .mbar-btn.primary{
+  position: relative;
+}
+.btn.primary::after, .mbar-btn.primary::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(43,176,230,0.45), rgba(142,68,173,0.35));
+  filter: blur(10px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .15s ease;
+}
+.btn.primary:hover::after, .mbar-btn.primary:hover::after{
+  opacity: 1;
+}
+a.btn, a.mbar-btn{ cursor: pointer; }
