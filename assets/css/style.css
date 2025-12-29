@@ -15,14 +15,20 @@ html, body {
 }
 
 /* ==============================
-   Hero Section (Main Banner)
+   Hero Section (Image on Left, Text on Right)
    ============================== */
-.hero-media {
-  position: relative;
-  width: 100%;
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 100vh;  /* Fullscreen hero section */
+}
+
+.hero-media {
+  width: 50%; /* Image takes up 50% of the width */
+  height: 100%; /* Full height */
   background-image: url('path_to_hero_image'); /* Replace with your image path */
-  background-size: cover; /* Make sure the image covers the entire section */
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   filter: brightness(80%) contrast(100%) saturate(110%); /* Adjust brightness and contrast */
@@ -41,20 +47,14 @@ html, body {
   filter: brightness(90%) contrast(120%) saturate(120%); /* Slightly increase contrast on hover */
 }
 
-/* ==============================
-   Hero Content - Centered Text & CTA
-   ============================== */
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the text */
+.hero-text {
+  width: 50%;  /* Text takes up the other 50% */
+  padding: 20px; /* Add some padding */
   color: #fff;
-  text-align: center;
-  z-index: 10;
+  text-align: left;
 }
 
-.hero-content h1 {
+.hero-text h1 {
   font-size: 60px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -62,7 +62,7 @@ html, body {
   letter-spacing: 1px;
 }
 
-.hero-content p {
+.hero-text p {
   font-size: 20px;
   margin-bottom: 30px;
   max-width: 650px;
@@ -70,13 +70,13 @@ html, body {
   margin-right: auto;
 }
 
-.hero-content .cta-buttons {
+.hero-text .cta-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   gap: 20px;
 }
 
-.hero-content .cta-buttons a {
+.hero-text .cta-buttons a {
   padding: 15px 40px;
   background-color: var(--primary-blue);
   color: #fff;
@@ -88,13 +88,13 @@ html, body {
   font-size: 16px;
 }
 
-.hero-content .cta-buttons a:hover {
+.hero-text .cta-buttons a:hover {
   background-color: var(--primary-purple);
   transform: translateY(-5px);
   box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content .cta-buttons a:active {
+.hero-text .cta-buttons a:active {
   transform: translateY(2px);
   box-shadow: none;
 }
@@ -216,15 +216,15 @@ html, body {
    Responsive Adjustments
    ============================== */
 @media (max-width: 1024px) {
-  .hero-content h1 {
+  .hero-text h1 {
     font-size: 48px;
   }
 
-  .hero-content p {
+  .hero-text p {
     font-size: 18px;
   }
 
-  .hero-content .cta-buttons a {
+  .hero-text .cta-buttons a {
     padding: 12px 30px;
   }
 
@@ -235,15 +235,15 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .hero-content h1 {
+  .hero-text h1 {
     font-size: 40px;
   }
 
-  .hero-content p {
+  .hero-text p {
     font-size: 16px;
   }
 
-  .hero-content .cta-buttons a {
+  .hero-text .cta-buttons a {
     padding: 10px 25px;
   }
 
@@ -254,15 +254,15 @@ html, body {
 }
 
 @media (max-width: 480px) {
-  .hero-content h1 {
+  .hero-text h1 {
     font-size: 32px;
   }
 
-  .hero-content p {
+  .hero-text p {
     font-size: 14px;
   }
 
-  .hero-content .cta-buttons a {
+  .hero-text .cta-buttons a {
     padding: 8px 20px;
     font-size: 14px;
   }
