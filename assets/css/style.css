@@ -81,21 +81,28 @@ body.theme-dark{
 /* ==============================
    Hero Media Image Fix
    ============================== */
-.hero-media,
+.hero-media {
+  position: relative;
+  width: 100%;         /* Ảnh chiếm toàn bộ chiều rộng */
+  height: 100vh;       /* Ảnh chiếm toàn bộ chiều cao màn hình */
+  background-size: cover; /* Ảnh sẽ phủ toàn bộ khung mà không bị méo */
+  background-position: center center; /* Căn giữa ảnh */
+  background-repeat: no-repeat; /* Không lặp ảnh */
+}
+
 .hero-media img {
-  width: 100%;         /* ảnh chiếm toàn bộ chiều ngang */
-  height: 100%;        /* ảnh chiếm toàn bộ chiều cao của khung */
-  max-height: 500px;   /* giới hạn chiều cao nếu cần */
-  object-fit: cover;   /* ảnh phủ toàn bộ khung nhưng vẫn giữ tỷ lệ, không méo */
-  object-position: center center; /* căn vị trí ảnh ở trung tâm */
+  width: 100%;         /* Ảnh chiếm toàn bộ chiều ngang của khung */
+  height: 100%;        /* Ảnh chiếm toàn bộ chiều cao của khung */
+  object-fit: cover;   /* Ảnh phủ toàn bộ khung nhưng vẫn giữ tỷ lệ, không méo */
+  object-position: center center; /* Căn vị trí ảnh ở trung tâm */
 }
 
 /* ==============================
    Other Styles
    ============================== */
-*{box-sizing:border-box}
-html,body{margin:0; padding:0}
-body{
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--text);
   background: radial-gradient(1200px 700px at 20% -10%, rgba(30,136,229,0.10), transparent 60%),
@@ -103,24 +110,24 @@ body{
               linear-gradient(180deg, var(--bg), var(--bg2));
   line-height: 1.55;
 }
-a{color: inherit; text-decoration:none}
-img{display:block; width:100%}
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
 
 /* Container */
-.container{max-width: var(--max); margin:0 auto; padding: 18px}
+.container { max-width: var(--max); margin: 0 auto; padding: 18px; }
 
 /* ==============================
    NAV
    ============================== */
-.nav{
-  position: sticky; top:0; z-index: 30;
+.nav {
+  position: sticky; top: 0; z-index: 30;
   backdrop-filter: blur(12px);
   background: color-mix(in srgb, var(--bg) 25%, transparent);
   border: 1px solid var(--border2);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 12px 14px;
-  display:flex; align-items:center; justify-content:space-between; gap: 12px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
 }
 
 /* ==============================
