@@ -100,6 +100,92 @@ html, body {
 }
 
 /* ==============================
+   Floating Links (Left Sidebar)
+   ============================== */
+.floating-links {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.floating-links a {
+  padding: 10px 20px;
+  background-color: var(--primary-blue);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.floating-links a:hover {
+  background-color: var(--primary-purple);
+  transform: translateX(5px);
+}
+
+.floating-links a:active {
+  transform: translateX(2px);
+}
+
+/* ==============================
+   Support Button (1:1) - Eye-catching
+   ============================== */
+.support-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 30px;
+  background-color: var(--primary-purple);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.support-btn:hover {
+  background-color: var(--primary-blue);
+  transform: translateY(-5px);
+}
+
+.support-btn:active {
+  transform: translateY(2px);
+}
+
+.ib-link {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  padding: 12px 28px;
+  background-color: var(--primary-blue);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.ib-link:hover {
+  background-color: var(--primary-purple);
+  transform: translateY(-5px);
+}
+
+.ib-link:active {
+  transform: translateY(2px);
+}
+
+/* ==============================
    Footer Section
    ============================== */
 .footer {
@@ -141,6 +227,11 @@ html, body {
   .hero-content .cta-buttons a {
     padding: 12px 30px;
   }
+
+  .floating-links {
+    top: 10%;
+    left: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -154,6 +245,11 @@ html, body {
 
   .hero-content .cta-buttons a {
     padding: 10px 25px;
+  }
+
+  .floating-links {
+    top: 10%;
+    left: 10px;
   }
 }
 
@@ -169,5 +265,10 @@ html, body {
   .hero-content .cta-buttons a {
     padding: 8px 20px;
     font-size: 14px;
+  }
+
+  .floating-links {
+    top: 20%;
+    left: 10px;
   }
 }
