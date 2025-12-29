@@ -81,10 +81,13 @@ body.theme-dark{
 /* ==============================
    Hero Media Image Fix
    ============================== */
+.hero-media,
 .hero-media img {
-  width: 100%;  /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của khung */
-  height: auto; /* Đảm bảo ảnh giữ tỷ lệ gốc khi chiều rộng thay đổi */
-  object-fit: contain; /* Đảm bảo ảnh không bị cắt và luôn nằm trong khung */
+  width: 100%;         /* ảnh chiếm toàn bộ chiều ngang */
+  height: 100%;        /* ảnh chiếm toàn bộ chiều cao của khung */
+  max-height: 500px;   /* giới hạn chiều cao nếu cần */
+  object-fit: cover;   /* ảnh phủ toàn bộ khung nhưng vẫn giữ tỷ lệ, không méo */
+  object-position: center center; /* căn vị trí ảnh ở trung tâm */
 }
 
 /* ==============================
