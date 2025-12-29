@@ -79,22 +79,21 @@ body.theme-dark{
 }
 
 /* ==============================
-   Hero Media Image Fix
+   Hero Media Image Fix - Improved Version
    ============================== */
 .hero-media {
-  position: relative;
-  width: 100%;         /* Ảnh chiếm toàn bộ chiều rộng */
-  height: 100vh;       /* Ảnh chiếm toàn bộ chiều cao màn hình */
-  background-size: cover; /* Ảnh sẽ phủ toàn bộ khung mà không bị méo */
+  width: 100%;         /* Chiếm toàn bộ chiều ngang */
+  height: 100vh;       /* Chiếm toàn bộ chiều cao màn hình */
+  background-size: cover; /* Ảnh phủ toàn bộ khung mà không bị méo */
   background-position: center center; /* Căn giữa ảnh */
   background-repeat: no-repeat; /* Không lặp ảnh */
 }
 
 .hero-media img {
-  width: 100%;         /* Ảnh chiếm toàn bộ chiều ngang của khung */
-  height: 100%;        /* Ảnh chiếm toàn bộ chiều cao của khung */
-  object-fit: cover;   /* Ảnh phủ toàn bộ khung nhưng vẫn giữ tỷ lệ, không méo */
-  object-position: center center; /* Căn vị trí ảnh ở trung tâm */
+  width: 100%;         /* Chiếm toàn bộ chiều ngang của khung */
+  height: 100%;        /* Chiếm toàn bộ chiều cao của khung */
+  object-fit: cover;   /* Ảnh phủ toàn bộ khung và giữ tỷ lệ gốc */
+  object-position: center center; /* Căn giữa ảnh */
 }
 
 /* ==============================
@@ -133,4 +132,3 @@ img { display: block; width: 100%; }
 /* ==============================
    Hero Section and Other Content
    ============================== */
-/* Add any other custom styles you need below */
