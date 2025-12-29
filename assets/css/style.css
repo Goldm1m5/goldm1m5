@@ -1,134 +1,134 @@
 /* ==============================
-   ABMGROUP / GOLDm1m5
-   Static site – WHITE (premium) + optional DARK MODE
-   - Premium white by default
-   - Auto dark via prefers-color-scheme
-   - Manual toggle supported (if index.html includes the toggle button + JS)
+   General Setup
    ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-:root{
-  /* Brand */
-  --primary-blue: #1E88E5;
-  --soft-blue: #2BB0E6;
-  --primary-purple: #6A1B9A;
-  --accent-purple: #8E44AD;
-
-  /* Light theme tokens */
-  --bg: #F5F7FA;
-  --bg2: #EEF2F8;
-  --surface: #FFFFFF;
-  --surface2: rgba(255,255,255,0.88);
-  --text: #0E1A2B;
-  --muted: #5C6B82;
-  --border: rgba(14,26,43,0.10);
-  --border2: rgba(14,26,43,0.07);
-
-  /* Effects */
-  --shadow: 0 12px 30px rgba(14, 26, 43, 0.12);
-  --shadow2: 0 14px 40px rgba(14, 26, 43, 0.14);
-  --radius: 18px;
-  --max: 1100px;
-
-  /* CTA gradient */
-  --grad: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-  --grad2: linear-gradient(135deg, rgba(43,176,230,0.18), rgba(142,68,173,0.14));
-
-  /* Image frames */
-  --frame-bg: #0B0F17;         /* dark frame for images (premium look) */
-  --frame-radius: 16px;
-
-  /* Toggle */
-  --toggle-bg: rgba(255,255,255,0.85);
-  --toggle-border: rgba(14,26,43,0.12);
+html, body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
 }
 
 /* ==============================
-   DARK THEME TOKENS
-   - Auto: prefers-color-scheme: dark
-   - Manual: body.theme-dark forces dark
-   ============================== */
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg: #0B0F17;
-    --bg2: #0E1422;
-    --surface: rgba(255,255,255,0.06);
-    --surface2: rgba(255,255,255,0.08);
-    --text: rgba(255,255,255,0.92);
-    --muted: rgba(255,255,255,0.62);
-    --border: rgba(255,255,255,0.10);
-    --border2: rgba(255,255,255,0.08);
-    --shadow: 0 16px 40px rgba(0,0,0,0.45);
-    --shadow2: 0 20px 50px rgba(0,0,0,0.55);
-    --toggle-bg: rgba(255,255,255,0.08);
-    --toggle-border: rgba(255,255,255,0.12);
-  }
-}
-body.theme-dark{
-  --bg: #0B0F17;
-  --bg2: #0E1422;
-  --surface: rgba(255,255,255,0.06);
-  --surface2: rgba(255,255,255,0.08);
-  --text: rgba(255,255,255,0.92);
-  --muted: rgba(255,255,255,0.62);
-  --border: rgba(255,255,255,0.10);
-  --border2: rgba(255,255,255,0.08);
-  --shadow: 0 16px 40px rgba(0,0,0,0.45);
-  --shadow2: 0 20px 50px rgba(0,0,0,0.55);
-  --toggle-bg: rgba(255,255,255,0.08);
-  --toggle-border: rgba(255,255,255,0.12);
-}
-
-/* ==============================
-   Hero Media Image Fix - Improved Version
+   Hero Section (Main Banner)
    ============================== */
 .hero-media {
-  width: 100%;         /* Chiếm toàn bộ chiều ngang */
-  height: 100vh;       /* Chiếm toàn bộ chiều cao màn hình */
-  background-size: cover; /* Ảnh phủ toàn bộ khung mà không bị méo */
+  position: relative;
+  width: 100%;
+  height: 100vh;  /* Chiếm toàn bộ chiều cao màn hình */
+  background-image: url('path_to_hero_image'); /* Đảm bảo đường dẫn ảnh đúng */
+  background-size: cover; /* Ảnh phủ toàn bộ khung */
   background-position: center center; /* Căn giữa ảnh */
-  background-repeat: no-repeat; /* Không lặp ảnh */
+  background-repeat: no-repeat;
+  filter: brightness(90%) contrast(100%) saturate(110%); /* Điều chỉnh sáng và độ tương phản cho ảnh */
 }
 
 .hero-media img {
-  width: 100%;         /* Chiếm toàn bộ chiều ngang của khung */
-  height: 100%;        /* Chiếm toàn bộ chiều cao của khung */
-  object-fit: cover;   /* Ảnh phủ toàn bộ khung và giữ tỷ lệ gốc */
-  object-position: center center; /* Căn giữa ảnh */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 /* ==============================
-   Other Styles
+   Content Over Hero (Text + CTA)
    ============================== */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  color: var(--text);
-  background: radial-gradient(1200px 700px at 20% -10%, rgba(30,136,229,0.10), transparent 60%),
-              radial-gradient(1000px 600px at 90% 0%, rgba(142,68,173,0.10), transparent 55%),
-              linear-gradient(180deg, var(--bg), var(--bg2));
-  line-height: 1.55;
-}
-a { color: inherit; text-decoration: none; }
-img { display: block; width: 100%; }
-
-/* Container */
-.container { max-width: var(--max); margin: 0 auto; padding: 18px; }
-
-/* ==============================
-   NAV
-   ============================== */
-.nav {
-  position: sticky; top: 0; z-index: 30;
-  backdrop-filter: blur(12px);
-  background: color-mix(in srgb, var(--bg) 25%, transparent);
-  border: 1px solid var(--border2);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 12px 14px;
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Căn giữa nội dung */
+  color: #fff;
+  text-align: center;
 }
 
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  padding: 15px 30px;
+  background-color: var(--primary-blue);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-purple);
+  transition: background-color 0.3s ease;
+}
+
 /* ==============================
-   Hero Section and Other Content
+   Footer Section
    ============================== */
+.footer {
+  background-color: var(--bg2);
+  color: var(--muted);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.footer a:hover {
+  color: var(--primary-purple);
+}
+
+/* ==============================
+   Responsive Adjustments
+   ============================== */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+  }
+}
